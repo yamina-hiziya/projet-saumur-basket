@@ -1,0 +1,212 @@
+/* --- VARIABLES DE COULEURS --- */
+:root {
+    --blue-primary: #002D62; /* Bleu marine du logo */
+    --gold-accent: #BFA164;   /* Or/Beige du logo (approximatif) */
+    --white: #FFFFFF;
+    --light-gray: #F8F9FA;
+    --dark-text: #333333;
+}
+
+/* --- STYLES GÉNÉRAUX --- */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--blue-primary);
+}
+
+/* --- EN-TÊTE --- */
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blue-primary);
+    font-weight: 600;
+    padding-bottom: 5px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--gold-accent);
+    border-bottom: 2px solid var(--gold-accent);
+}
+
+/* --- SECTION HÉROS --- */
+.hero {
+    background: linear-gradient(rgba(0, 45, 98, 0.7), rgba(0, 45, 98, 0.7)), url('https://via.placeholder.com/1920x600?text=Photo+de+Match+SLB49') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--gold-accent);
+    margin-bottom: 30px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--blue-primary);
+    color: var(--white);
+    border: 2px solid var(--gold-accent);
+}
+
+.btn-primary:hover {
+    background-color: #001f44;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--gold-accent);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: #a68a51;
+    transform: translateY(-2px);
+}
+
+/* --- SECTION PROCHAIN MATCH --- */
+.next-match {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--light-gray);
+}
+
+.match-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin: 30px 0;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.team img {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.match-info .vs {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gold-accent);
+    margin: 10px 0;
+}
+.match-info .date {
+    font-weight: bold;
+}
+
+/* --- SECTION ACTUALITÉS --- */
+.news {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.news-item {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+}
+
+.news-item h3, .news-item p, .news-item a {
+    padding: 0 20px;
+}
+
+.news-item a {
+    display: inline-block;
+    margin: 15px 20px;
+    text-decoration: none;
+    color: var(--gold-accent);
+    font-weight: bold;
+}
+
+/* --- PIED DE PAGE --- */
+footer {
+    background-color: var(--blue-primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+}
