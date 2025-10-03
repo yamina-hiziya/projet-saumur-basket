@@ -1,4 +1,6 @@
-/* --- VARIABLES DE COULEURS --- */
+/* ========================================= */
+/* ---       VARIABLES DE COULEURS       --- */
+/* ========================================= */
 :root {
     --blue-primary: #002D62; /* Bleu marine du logo */
     --gold-accent: #BFA164;   /* Or/Beige du logo (approximatif) */
@@ -7,7 +9,10 @@
     --dark-text: #333333;
 }
 
-/* --- STYLES GÉNÉRAUX --- */
+/* ========================================= */
+/* ---           STYLES GÉNÉRAUX         --- */
+/* ========================================= */
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -26,7 +31,10 @@ h1, h2, h3 {
     color: var(--blue-primary);
 }
 
-/* --- EN-TÊTE --- */
+/* ========================================= */
+/* ---           EN-TÊTE                 --- */
+/* ========================================= */
+
 header {
     background-color: var(--white);
     border-bottom: 1px solid #eee;
@@ -67,7 +75,10 @@ nav a:hover, nav a.active {
     border-bottom: 2px solid var(--gold-accent);
 }
 
-/* --- SECTION HÉROS --- */
+/* ========================================= */
+/* ---           SECTION HÉROS           --- */
+/* ========================================= */
+
 .hero {
     background: linear-gradient(rgba(0, 45, 98, 0.7), rgba(0, 45, 98, 0.7)), url('https://via.placeholder.com/1920x600?text=Photo+de+Match+SLB49') no-repeat center center/cover;
     height: 60vh;
@@ -120,7 +131,10 @@ nav a:hover, nav a.active {
     transform: translateY(-2px);
 }
 
-/* --- SECTION PROCHAIN MATCH --- */
+/* ========================================= */
+/*          SECTION PROCHAIN MATCH           */
+/* ========================================= */
+
 .next-match {
     padding: 60px 0;
     text-align: center;
@@ -161,7 +175,10 @@ nav a:hover, nav a.active {
     font-weight: bold;
 }
 
-/* --- SECTION ACTUALITÉS --- */
+/* ========================================= */
+/*         SECTION ACTUALITÉS                */
+/* ========================================= */
+
 .news {
     padding: 60px 0;
     text-align: center;
@@ -203,10 +220,44 @@ nav a:hover, nav a.active {
     font-weight: bold;
 }
 
-/* --- PIED DE PAGE --- */
+
 footer {
     background-color: var(--blue-primary);
     color: var(--white);
     text-align: center;
     padding: 20px 0;
 }
+
+/* ========================================= */
+/*            RESPONSIVE DESIGN              */
+/* ========================================= */
+
+/* Pour les écrans de moins de 768px (tablettes et la plupart des mobiles) */
+@media (max-width: 768px) {
+    
+    /* Exemple : faire passer la grille d'actualités sur une seule colonne */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Exemple : réorganiser le header pour un futur menu "burger" */
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .match-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* ========================================= */
+/* ---           SECTION HÉROS           --- */
+/* ========================================= */
